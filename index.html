@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dona Euzébia Plantas — Paisagismo e plantio para obras em todo o Brasil</title>
+  <meta name="description" content="Fornecimento de plantas, projetos paisagísticos, plantio especializado e transplante de árvores adultas para pequenas, médias e grandes obras." />
+
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Ícones (Lucide via CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- ================= ESTILOS ================= -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="cabecalho">
+    <div class="cabecalho__interno container">
+      <a href="#inicio" class="cabecalho__logo">
+        <img src="https://id-preview--338fca2a-2e60-42fd-b3b0-0243faa10644.lovable.app/__l5e/assets-v1/43e5cea9-021a-4566-9ac5-765b611bff1a/logo.png" alt="Dona Euzébia Plantas" />
+      </a>
+
+      <nav class="cabecalho__nav">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#plantas">Plantas</a>
+        <a href="#orcamento">Orçamento</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="botao-orcamento" href="https://wa.me/5532999183344?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noreferrer">
+        Orçamento
+      </a>
+
+      <button class="cabecalho__menu-mobile" id="botaoMenu" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="menu-mobile" id="menuMobile">
+      <div class="menu-mobile__lista">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#plantas">Plantas</a>
+        <a href="#orcamento">Orçamento</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="inicio" class="hero">
+    <!-- Slides do carrossel -->
+    <div class="hero__slide ativo">
+      <img src="1.jpg" alt="" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__slide">
+      <img src="2.jpg" alt="" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__slide">
+      <img src="3.jpg" alt="" />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__conteudo">
+      <div class="hero__texto">
+        <div class="hero__categoria">
+          <span class="hero__linha"></span>
+          <span>A cidade das plantas</span>
+        </div>
+        <h1 class="hero__titulo">
+          Plantas, paisagismo e plantio especializado
+          <span class="destaque">para obras em todo o Brasil.</span>
+        </h1>
+        <p class="hero__descricao">
+          Fornecimento de plantas, projetos paisagísticos e transplante de árvores adultas — para pequenas, médias e grandes obras.
+        </p>
+        <div class="hero__acoes">
+          <a href="https://wa.me/5532999183344" target="_blank" rel="noreferrer" class="botao-principal">
+            Solicitar orçamento
+          </a>
+          <a href="#servicos" class="botao-link">
+            Conhecer serviços <i data-lucide="arrow-right" width="14" height="14"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Indicadores -->
+      <div class="hero__indicadores" id="indicadores">
+        <button class="hero__indicador ativo" data-slide="0" aria-label="slide 1"></button>
+        <button class="hero__indicador" data-slide="1" aria-label="slide 2"></button>
+        <button class="hero__indicador" data-slide="2" aria-label="slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOBRE ================= -->
+  <section id="sobre" class="secao">
+    <div class="container sobre__grid">
+      <div>
+        <span class="rotulo">Sobre nós</span>
+        <h2 class="titulo-secao">
+          Especialistas em plantas, paisagismo e <em>grandes obras</em>.
+        </h2>
+        <p class="sobre__paragrafo">
+          A Dona Euzébia Plantas está localizada em Dona Euzébia, Minas Gerais, cidade reconhecida nacionalmente pelo mercado de plantas. Atuamos com produção própria, grande variedade de espécies, estrutura moderna e equipe qualificada para atender projetos paisagísticos, obras privadas, urbanização e licitações em todo o Brasil.
+        </p>
+        <ul class="lista-checks">
+          <li><i data-lucide="check-circle-2" width="16" height="16"></i> Produção própria de plantas</li>
+          <li><i data-lucide="check-circle-2" width="16" height="16"></i> Grande variedade de espécies</li>
+          <li><i data-lucide="check-circle-2" width="16" height="16"></i> Obras pequenas, médias e grandes</li>
+          <li><i data-lucide="check-circle-2" width="16" height="16"></i> Equipe especializada</li>
+          <li><i data-lucide="check-circle-2" width="16" height="16"></i> Estrutura e maquinário moderno</li>
+          <li><i data-lucide="check-circle-2" width="16" height="16"></i> Atendimento em todo o Brasil</li>
+        </ul>
+      </div>
+      <div class="sobre__imagem">
+        <img src="https://id-preview--338fca2a-2e60-42fd-b3b0-0243faa10644.lovable.app/__l5e/assets-v1/cb708813-ea6c-4514-aa6e-7b8bee785272/banner2.jpg" alt="Viveiro Dona Euzébia" />
+        <div class="sobre__selo">
+          <div class="sobre__selo-numero">+30</div>
+          <div class="sobre__selo-texto">anos de experiência</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVIÇOS ================= -->
+  <section id="servicos" class="secao secao--creme">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="rotulo">Serviços</span>
+        <h2 class="titulo-secao">
+          Para transformar seu projeto em <em>realidade</em>.
+        </h2>
+      </div>
+      <div class="grade-servicos">
+        <article class="servico-card">
+          <i data-lucide="leaf" width="28" height="28" stroke-width="1.25"></i>
+          <h3>Fornecimento de Plantas</h3>
+          <p>Plantas de qualidade em diferentes portes para projetos paisagísticos, obras, jardins, áreas verdes e urbanização.</p>
+        </article>
+        <article class="servico-card">
+          <i data-lucide="flower-2" width="28" height="28" stroke-width="1.25"></i>
+          <h3>Paisagismo</h3>
+          <p>Criação e execução de projetos paisagísticos de acordo com a necessidade de cada cliente, de pequenos espaços a grandes projetos.</p>
+        </article>
+        <article class="servico-card">
+          <i data-lucide="sprout" width="28" height="28" stroke-width="1.25"></i>
+          <h3>Plantio Especializado</h3>
+          <p>Plantio de mudas de pequeno e grande porte com equipe qualificada, técnica e cuidado em cada etapa.</p>
+        </article>
+        <article class="servico-card">
+          <i data-lucide="tree-pine" width="28" height="28" stroke-width="1.25"></i>
+          <h3>Transplante de Árvores Adultas</h3>
+          <p>Transplante e transporte de árvores adultas com segurança, técnica e experiência para projetos em todo o Brasil.</p>
+        </article>
+        <article class="servico-card">
+          <i data-lucide="users" width="28" height="28" stroke-width="1.25"></i>
+          <h3>Urbanização</h3>
+          <p>Atendimento para grandes projetos de urbanização com árvores de médio e grande porte, seguindo critérios técnicos.</p>
+        </article>
+        <article class="servico-card">
+          <i data-lucide="truck" width="28" height="28" stroke-width="1.25"></i>
+          <h3>Logística &amp; Frota</h3>
+          <p>Frota própria e equipe preparada para transporte seguro de plantas e árvores em todo o território nacional.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PLANTAS ================= 
+  <section id="plantas" class="secao">
+    <div class="container plantas__grid">
+      <div>
+        <span class="rotulo">Catálogo</span>
+        <h2 class="titulo-secao">
+          Variedade para <em>todo</em> tipo de projeto.
+        </h2>
+        <p class="sobre__paragrafo">
+          Trabalhamos com plantas em diferentes tamanhos e portes, atendendo desde projetos residenciais até grandes obras paisagísticas e urbanas.
+        </p>
+      </div>
+      <div class="plantas__catalogo">
+        <div class="planta-item">Árvores nativas</div>
+        <div class="planta-item">Palmeiras</div>
+        <div class="planta-item">Frutíferas</div>
+        <div class="planta-item">Citros</div>
+        <div class="planta-item">Forrações</div>
+        <div class="planta-item">Ornamentais</div>
+        <div class="planta-item">Arbustos</div>
+        <div class="planta-item">Herbáceas</div>
+        <div class="planta-item">Plantas em porte adulto</div>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- ================= DIFERENCIAIS ================= 
+  <section class="secao secao--escura">
+    <div class="fundo-imagem">
+      <img src="https://id-preview--338fca2a-2e60-42fd-b3b0-0243faa10644.lovable.app/__l5e/assets-v1/802b6d69-eb46-4089-ab78-fc5573207541/banner3.jpg" alt="" />
+    </div>
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="rotulo rotulo--sol">Diferenciais</span>
+        <h2 class="titulo-secao">
+          Por que escolher a <em>Dona Euzébia</em>?
+        </h2>
+      </div>
+      <div class="grade-diferenciais">
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Produção própria</div>
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Frota própria</div>
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Transporte seguro</div>
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Grande variedade</div>
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Plantas em todos os portes</div>
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Equipe qualificada</div>
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Experiência em grandes obras</div>
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Atendimento nacional</div>
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Boas condições de pagamento</div>
+        <div class="diferencial-item"><i data-lucide="check-circle-2" width="16" height="16"></i> Estrutura para grandes demandas</div>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- ================= PARA QUEM ================= 
+  <section class="secao secao--creme">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="rotulo rotulo--ameixa">Para quem</span>
+        <h2 class="titulo-secao">
+          Atendemos diferentes <em>clientes</em> e projetos.
+        </h2>
+      </div>
+      <div class="grade-publico">
+        <div class="publico-item">Construtoras</div>
+        <div class="publico-item">Arquitetos</div>
+        <div class="publico-item">Paisagistas</div>
+        <div class="publico-item">Prefeituras</div>
+        <div class="publico-item">Empresas de urbanização</div>
+        <div class="publico-item">Condomínios</div>
+        <div class="publico-item">Loteamentos</div>
+        <div class="publico-item">Fazendas e chácaras</div>
+        <div class="publico-item">Clientes residenciais</div>
+        <div class="publico-item">Obras públicas e privadas</div>
+      </div>
+    </div>
+  </section>-->
+  <!-- ================= CTA ORÇAMENTO ================= 
+  <section id="orcamento" class="secao">
+    <div class="cta-orcamento">
+      <div class="cta-orcamento__caixa">
+        <div class="cta-orcamento__brilho-1"></div>
+        <div class="cta-orcamento__brilho-2"></div>
+        <div class="cta-orcamento__interno">
+          <div>
+            <span class="rotulo rotulo--sol">Orçamento</span>
+            <h2 class="titulo-secao">
+              Plantas para sua obra ou <em>projeto paisagístico</em>.
+            </h2>
+            <p class="cta-orcamento__descricao">
+              Fale com nossa equipe e solicite um orçamento personalizado.
+            </p>
+          </div>
+          <a href="https://wa.me/5532999183344" target="_blank" rel="noreferrer" class="botao-principal">
+            <i data-lucide="message-circle" width="16" height="16"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- ================= CONTATO ================= 
+  <section id="contato" class="secao secao--escura">
+    <div class="container contato__grid">
+      <div>
+        <span class="rotulo rotulo--sol">Contato</span>
+        <h2 class="titulo-secao">Vamos <em>conversar</em>.</h2>
+
+        <div class="contato__linha">
+          <i data-lucide="map-pin" width="16" height="16"></i>
+          <div>
+            <div class="contato__rotulo">Dona Euzébia Plantas</div>
+            <div class="contato__valor">Rodovia MGT 120, km 746 — Zona Rural<br />Dona Euzébia, Minas Gerais</div>
+          </div>
+        </div>
+        <div class="contato__linha">
+          <i data-lucide="phone" width="16" height="16"></i>
+          <div>
+            <div class="contato__rotulo">WhatsApp</div>
+            <a href="https://wa.me/5532999183344" class="contato__valor">32 99900-3338</a>
+          </div>
+        </div>
+        <div class="contato__linha">
+          <i data-lucide="mail" width="16" height="16"></i>
+          <div>
+            <div class="contato__rotulo">E-mail</div>
+            <a href="mailto:contato@donaeuzebiaplantas.com.br" class="contato__valor">contato@donaeuzebiaplantas.com.br</a>
+          </div>
+        </div>
+
+        <a href="https://wa.me/5532999183344" target="_blank" rel="noreferrer" class="botao-principal" style="margin-top: 40px;">
+          <i data-lucide="message-circle" width="16" height="16"></i> Chamar no WhatsApp
+        </a>
+      </div>
+
+      <div class="cartao-contato">
+        <div>
+          <img class="cartao-contato__logo" src="https://id-preview--338fca2a-2e60-42fd-b3b0-0243faa10644.lovable.app/__l5e/assets-v1/43e5cea9-021a-4566-9ac5-765b611bff1a/logo.png" alt="Dona Euzébia Plantas" />
+          <p class="cartao-contato__frase">A cidade das plantas, mais natureza na sua vida.</p>
+          <p class="cartao-contato__nota">
+            Produção própria, paisagismo, plantio especializado e transplante de árvores adultas para obras em todo o Brasil.
+          </p>
+        </div>
+        <div class="cartao-contato__tags">
+          <span class="tag">Paisagismo</span>
+          <span class="tag">Urbanização</span>
+          <span class="tag">Transplante</span>
+          <span class="tag">Frota própria</span>
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="rodape">
+    © <span id="ano"></span> Dona Euzébia Plantas — Todos os direitos reservados.
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5532999183344" target="_blank" rel="noreferrer" class="whatsapp-flutuante" aria-label="WhatsApp">
+    <i data-lucide="message-circle" width="20" height="20"></i>
+  </a>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script src="script.js"></script>
+</body>
+</html>
