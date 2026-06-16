@@ -2,6 +2,7 @@
 :root {
   --folha: #37B34A;          /* verde folha */
   --folha-escuro: #2a8f3a;   /* verde profundo (escuro) */
+  --folha-claro: #7be48b;    /* verde claro para borda animada */
   --ameixa: #5b2a4a;         /* roxo ameixa */
   --sol: #f3c969;            /* amarelo sol */
   --creme: #f6f1e7;          /* fundo creme */
@@ -11,6 +12,9 @@
   --borda: rgba(0, 0, 0, 0.08);
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Montserrat", system-ui, -apple-system, sans-serif;
+  --marca: #37B34A;          /* cor da marca (verde principal) */
+  --marca-texto: #fff;       /* texto quando botão está hover */
+  --angle: 0deg;             /* variável para animação do botão */
 }
 
 /* ---------- Reset básico ---------- */
@@ -69,7 +73,7 @@ em { font-style: italic; }
   display: none;
   align-items: center;
   gap: 8px;
-  background: var(--folha-escuro);
+  background: #37B34A;
   color: #fff;
   padding: 8px 20px;
   border-radius: 999px;
@@ -79,7 +83,7 @@ em { font-style: italic; }
   text-transform: uppercase;
   transition: background .2s;
 }
-.botao-orcamento:hover { background: var(--folha); }
+.botao-orcamento:hover { background: var(--folha-escuro); }
 
 .cabecalho__menu-mobile {
   color: var(--folha-escuro);
@@ -87,7 +91,14 @@ em { font-style: italic; }
   display: flex;
 }
 
-@media (min-width: 640px) { .botao-orcamento { display: inline-flex; } }
+/* Esconde o botão Orçamento no mobile */
+.cabecalho .botao-pathfinder {
+  display: none;
+}
+@media (min-width: 640px) {
+  .cabecalho .botao-pathfinder { display: inline-flex; }
+}
+
 @media (min-width: 1024px) {
   .cabecalho__nav { display: flex; }
   .cabecalho__menu-mobile { display: none; }
@@ -111,12 +122,13 @@ em { font-style: italic; }
   max-height: 760px;
   min-height: 600px;
   overflow: hidden;
+  background: #000; /* Fundo escuro para evitar flash branco durante a transição */
 }
 .hero__slide {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1.4s ease;
+  transition: opacity 0.9s ease-in-out; /* Transição mais rápida para reduzir o flash */
 }
 .hero__slide.ativo { opacity: 1; }
 .hero__slide img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.05); }
@@ -139,12 +151,12 @@ em { font-style: italic; }
   display: flex; align-items: center; gap: 12px;
   margin-bottom: 32px;
 }
-.hero__linha { height: 1px; width: 40px; background: rgba(243,201,105,0.8); display: inline-block; }
+.hero__linha { height: 1px; width: 40px; background: #37B34A; display: inline-block; }
 .hero__categoria span {
   font-size: 11px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(243,201,105,0.9);
+  color: #37B34A;
   font-weight: 500;
 }
 .hero__titulo {
@@ -159,7 +171,7 @@ em { font-style: italic; }
   display: block;
   font-style: italic;
   font-weight: 400;
-  color: rgba(243,201,105,0.95);
+  color: #37B34A;
   margin-top: 8px;
 }
 .hero__descricao {
@@ -172,8 +184,8 @@ em { font-style: italic; }
 .hero__acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
 .botao-principal {
   display: inline-flex; align-items: center; gap: 8px;
-  background: var(--sol);
-  color: var(--folha-escuro);
+  background: #37B34A;
+  color: #fff;
   padding: 14px 28px;
   border-radius: 999px;
   font-size: 11px;
@@ -182,7 +194,7 @@ em { font-style: italic; }
   text-transform: uppercase;
   transition: background .2s;
 }
-.botao-principal:hover { background: #fff; }
+.botao-principal:hover { background: var(--folha-escuro); }
 .botao-link {
   display: inline-flex; align-items: center; gap: 8px;
   color: rgba(255,255,255,0.9);
@@ -210,7 +222,7 @@ em { font-style: italic; }
   background: rgba(255,255,255,0.4);
   transition: all .3s;
 }
-.hero__indicador.ativo { width: 40px; background: var(--sol); }
+.hero__indicador.ativo { width: 40px; background: #37B34A; }
 
 @media (min-width: 768px) { .hero__titulo { font-size: 3rem; } }
 @media (min-width: 1024px) { .hero__titulo { font-size: 3.5rem; } }
@@ -522,7 +534,7 @@ em { font-style: italic; }
   position: fixed;
   bottom: 24px; right: 24px;
   z-index: 50;
-  background: var(--folha-escuro);
+  background: #37B34A;
   color: #fff;
   width: 48px; height: 48px;
   border-radius: 50%;
@@ -530,4 +542,75 @@ em { font-style: italic; }
   box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
   transition: background .2s;
 }
-.whatsapp-flutuante:hover { background: var(--folha); }
+.whatsapp-flutuante:hover { background: var(--folha-escuro); }
+
+/* ============ BOTÃO PATHFINDER (CTA) ============ */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.botao-pathfinder {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.068);
+  color: var(--marca);
+  border: none;
+  overflow: hidden;
+  isolation: isolate;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.botao-pathfinder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2.5px;
+  border-radius: inherit;
+
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    transparent 250deg,
+    color-mix(in oklch, var(--marca) 25%, transparent) 275deg,
+    var(--marca) 305deg,
+    color-mix(in oklch, var(--marca) 30%, transparent) 330deg,
+    transparent 360deg
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  animation: pathfinder-border 3s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.botao-pathfinder > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes pathfinder-border {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@media(min-width:768px){
+  .botao-pathfinder{
+    padding: 16px 36px;
+    font-size: 16px;
+  }
+}
