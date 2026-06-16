@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Plantas | Dona Euzébia Plantas</title>
+  <meta name="description" content="Confira o catálogo de árvores nativas, frutíferas, palmeiras, ornamentais, forrações e citros da Dona Euzébia Plantas. Solicite orçamento pelo WhatsApp.">
+
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Ícones Lucide -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="cabecalho__interno container">
+      <a href="index.html" class="cabecalho__logo">
+        <img src="https://id-preview--338fca2a-2e60-42fd-b3b0-0243faa10644.lovable.app/__l5e/assets-v1/43e5cea9-021a-4566-9ac5-765b611bff1a/logo.png" alt="Dona Euzébia Plantas">
+      </a>
+
+      <nav class="cabecalho__nav">
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+
+      <a class="botao-pathfinder" href="https://wa.me/5532999183344?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noreferrer">
+        Orçamento
+      </a>
+
+      <button class="cabecalho__menu-mobile" id="botaoMenu" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="menu-mobile" id="menuMobile">
+      <div class="menu-mobile__lista">
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="index.html#contato">Contato</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="secao">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="rotulo">Catálogo</span>
+        <h2 class="titulo-secao">Catálogo de Plantas Dona Euzébia</h2>
+        <p style="margin-top: 16px; color: var(--texto-suave); font-size: 14px;">
+          Escolha as plantas desejadas, adicione ao carrinho e envie sua solicitação diretamente pelo WhatsApp.
+        </p>
+      </div>
+
+      <!-- FILTROS -->
+      <div class="catalogo-filtros">
+        <div class="filtro-busca">
+          <i data-lucide="search"></i>
+          <input type="text" id="buscaProduto" placeholder="Buscar produto...">
+        </div>
+        <div class="filtro-categorias" id="filtroCategorias">
+          <button class="filtro-categoria ativo" data-categoria="todas">Todas</button>
+        </div>
+        <button class="botao-limpar-filtros" id="limparFiltros">
+          <i data-lucide="x"></i> Limpar filtros
+        </button>
+      </div>
+
+      <!-- GRID DE PRODUTOS -->
+      <div class="catalogo-grid" id="catalogoGrid"></div>
+    </div>
+  </section>
+
+  <!-- BOTÃO FLUTUANTE CARRINHO -->
+  <button class="carrinho-flutuante" id="carrinhoFlutuante">
+    <i data-lucide="shopping-cart"></i>
+    <span class="carrinho-contador" id="carrinhoContador">0</span>
+  </button>
+
+  <!-- DRAWER DO CARRINHO -->
+  <div class="carrinho-overlay" id="carrinhoOverlay"></div>
+  <aside class="carrinho-drawer" id="carrinhoDrawer">
+    <div class="carrinho-header">
+      <h3>Seu Carrinho</h3>
+      <button class="carrinho-fechar" id="carrinhoFechar">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="carrinho-conteudo" id="carrinhoConteudo">
+      <div class="carrinho-vazio">
+        <i data-lucide="shopping-cart"></i>
+        <p>Seu carrinho de orçamento está vazio</p>
+      </div>
+    </div>
+    <div class="carrinho-footer" id="carrinhoFooter" style="display: none;">
+      <button class="botao-limpar-carrinho" id="limparCarrinho">
+        <i data-lucide="trash-2"></i> Limpar carrinho
+      </button>
+      <a class="botao-whatsapp-carrinho" id="botaoWhatsApp" href="#" target="_blank" rel="noreferrer">
+        <i data-lucide="message-circle"></i> Enviar pedido pelo WhatsApp
+      </a>
+    </div>
+  </aside>
+
+  <!-- TOAST DE SUCESSO -->
+  <div class="toast" id="toast">
+    <i data-lucide="check-circle"></i>
+    <span>Produto adicionado ao carrinho!</span>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    © <span id="ano"></span> Dona Euzébia Plantas — Todos os direitos reservados.
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+  <script src="catalogo.js"></script>
+</body>
+</html>
